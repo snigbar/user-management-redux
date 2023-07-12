@@ -9,8 +9,8 @@ const Home = () => {
      {/* table */}
      <div className="flex flex-col">
       <div className="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
-     <h1 className='text-center text-3xl my-4 font-semibold text-gray-600 uppercase'>All users</h1>
-     <p className='text-center text-lg text-[#217e80]'>You can manage all users from here</p>
+     <h1 className='text-center text-3xl mb-4 font-semibold text-gray-600 uppercase'>All users</h1>
+     <p className='text-center text-lg mb-2 text-[#217e80]'>You can manage all users from here</p>
       <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
       <div className="overflow-hidden">
 

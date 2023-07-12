@@ -4,7 +4,7 @@ const TableRow = () => {
   return (
     <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-slate-50 border-b-slate-200">
     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
-    <td className="text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+    <td className="text-lg text-gray-900 font-normal px-6 py-4 whitespace-nowrap">
       Mark
     </td>
     <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">
