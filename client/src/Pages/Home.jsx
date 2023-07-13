@@ -87,7 +87,7 @@ const Home = () => {
       <tbody>
         {/* table body */}
     
-   <TableRow></TableRow>
+   {users.map((user, idx) => <TableRow data={user} key={user._id} idx={idx}></TableRow>)}
   
       </tbody>
       </table>

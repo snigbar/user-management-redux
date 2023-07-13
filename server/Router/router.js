@@ -8,6 +8,7 @@ router.get('/', (req, res) =>{
 
 router.get('/users', async(req,res) =>{
     const result = await userModel.find()
+    console.log(result)
     res.send(result)
 })
 
