@@ -2,7 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const dotenv = require('dotenv')
-const userModel = require('./model/userModel.js')
+const userRoutes = require('./Router/router.js')
+const router = express.Router()
 
 const app = express()
 const port = process.env.PORT || 5000
@@ -12,9 +13,7 @@ app.use(express.json())
 app.use(cors())
 
 
-app.get('/', (req, res) =>{
-    res.send('runnig @beta')
-})
+app.use('/', userRoutes)
 
 
 // connect
@@ -25,7 +24,3 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cl
     console.log(err)
 })
 
-app.get('/users', async(req,res) =>{
-    const result = await userModel.find()
-    res.send(result)
-})
