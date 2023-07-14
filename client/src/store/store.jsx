@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userReducer from '../Slice/UserSlice.jsx'
-import {serverApi} from '../API/api.js'
+import {serverApi} from '../API/api.jsx'
 import { setupListeners } from '@reduxjs/toolkit/query';
 
 

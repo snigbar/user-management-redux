@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Home from './Pages/Home.jsx'
 import UserDetails from './Pages/UserDetails.jsx'
+import CreateUser from './Pages/CreateUser.jsx'
 
 
 const router = createBrowserRouter([
@@ -24,7 +25,11 @@ const router = createBrowserRouter([
       {
         path:'/user/:id',
         element:<UserDetails></UserDetails>
-      }
+      },
+      {
+        path:'/update/:id',
+        element:<CreateUser></CreateUser>
+      },
     ]
   },
 ]);

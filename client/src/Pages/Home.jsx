@@ -22,7 +22,6 @@ const Home = () => {
     if(users.length > 0 && !isLoading) dispatch(setUsers(users))
   },[users, dispatch])
 
-  console.log(usersState)
 
   if(isLoading || isFetching){
    return <div className="w-full h-screen flex flex-col justify-center text-center">

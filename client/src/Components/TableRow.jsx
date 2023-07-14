@@ -14,7 +14,7 @@ const TableRow = ({data,idx}) => {
     <Link to={`user/${_id}`}><button type="button" className="text-white bg-[#217e80] hover:bg-[#186163] focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 mx-auto">View Details</button></Link>
     </td>
     <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">
-    <button type="button" className="text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 mx-auto">Update</button>
+    <Link to={`update/${_id}`}><button type="button" className="text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 mx-auto">Update</button></Link>
     </td>
     <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">
     <button type="button" className="text-white bg-[#EB5351] hover:bg-[#ce3e3b] focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 mx-auto">Delete</button>

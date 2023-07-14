@@ -10,8 +10,6 @@ const UserDetails = () => {
     const {name, email, phone} = user
   return (
     <div className="min-h-[calc(100vh-80px)] flex justify-center items-center drop-shadow-xl">
-
-    {/* table */}
     <div className="flex flex-col w-full">
      <div className="sm:mx-0.5 lg:mx-0.5">
     <h1 className='text-center text-3xl mb-4 font-semibold text-gray-600 uppercase'>Details</h1>
