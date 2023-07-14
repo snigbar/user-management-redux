@@ -4,6 +4,7 @@ import { useGetUsersQuery } from '../API/api';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUsers } from '../Slice/UserSlice';
 
+export let refetchApi;
 const Home = () => {
 
   const usersState = useSelector((state) => state.users.users)
@@ -14,7 +15,7 @@ const Home = () => {
     isLoading,
     isFetching,
     isError,
-    error,
+    error
   } = useGetUsersQuery();
  
 

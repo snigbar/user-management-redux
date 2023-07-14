@@ -5,12 +5,13 @@ const Navbar = () => {
   return (
     <nav className="h-20 bg-transparent flex justify-between items-center w-11/12 mx-auto">
       {/* logo */}
-      <div className="text-2xl">logo</div>
+      <div className="text-2xl font-medium text-[#217e80]">UserHub</div>
 
       {/* links */}
 
       <ul className="flex items-center justify-between text-lg gap-8">
         <NavLink to='/' className='px-4 py-2'>Home</NavLink>
+        <NavLink to='/all' className='px-4 py-2'>All Users</NavLink>
         <Link to='/update/create'><button className="btn text-white bg-[#217e80] hover:bg-[#186163] hover:-translate-y-1 transition-all duration-500 px-4 py-3 rounded-lg active:translate-y-1">Add User</button></Link>
         
       </ul>

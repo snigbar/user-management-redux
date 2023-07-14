@@ -5,7 +5,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const serverApi = createApi({
     reducerPath: 'serverApi',
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000/' }),
+    baseQuery: fetchBaseQuery({ baseUrl: 'https://redux-user-server.vercel.app' }),
     tagTypes: ['users'],
     endpoints: (builder) => ({
       getUsers: builder.query({
@@ -47,6 +47,7 @@ export const serverApi = createApi({
   
     }),
   })
+
 
 
   export const { useGetUsersQuery, useCreateUserMutation , useUpdateUserMutation, useDeleteUserMutation} = serverApi;

@@ -11,6 +11,7 @@ import {
 import Home from './Pages/Home.jsx'
 import UserDetails from './Pages/UserDetails.jsx'
 import CreateUser from './Pages/CreateUser.jsx'
+import AllUsers from './Pages/AllUsers.jsx'
 
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>
+      },
+      {
+        path:'/all',
+        element:<AllUsers></AllUsers>
       },
       {
         path:'/user/:id',
