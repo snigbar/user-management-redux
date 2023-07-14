@@ -30,5 +30,14 @@ router.put('/user/:id', async(req,res) =>{
 
 })
 
+router.delete('/user/:id', async(req,res) =>{
+    const id = req.params?.id
+    await userModel.findByIdAndDelete({ _id: id}).
+    then(user => {
+        res.json(user)
+    }).catch(err => res.json(err)) 
+
+})
+
 module.exports = router
 

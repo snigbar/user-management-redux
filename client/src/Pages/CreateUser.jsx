@@ -8,8 +8,8 @@ const CreateUser = () => {
 
     const [user, setUser] = useState({})
     const {id} = useParams()
-    const userData = useSelector(state => state.users.users.find(user => user._id === id))
-    const {_id} = userData
+    const userData = id ? useSelector(state => state.users.users.find(user => user._id === id)): {}
+    const _id = userData?._id
     
 
     useEffect(()=>{
@@ -18,9 +18,6 @@ const CreateUser = () => {
         }
     },[userData])
    
-    
-
-
 
     const [CreateUser] = useCreateUserMutation()
     const [updateUser] = useUpdateUserMutation()
@@ -43,9 +40,29 @@ const CreateUser = () => {
                 showConfirmButton: false,
                 timer: 1500
               })
-
+              navigate('/', {replace:true})
         }
-        navigate('/', {replace:true})
+
+        if(response.errors){
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: `${response.message}`,
+                showConfirmButton: false,
+                timer: 3000
+              })
+        }
+
+        if(response.code === 11000){
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: `${response.keyValue?.email} already in use`,
+                showConfirmButton: false,
+                timer: 3000
+              })
+        }
+        console.log(response)
       }).catch((err) => {
         // Handle error here
         console.error(err);
@@ -81,9 +98,9 @@ const CreateUser = () => {
                 showConfirmButton: false,
                 timer: 1500
               })
+              e.target.reset()
         }
        
-     
       }).catch((err) => {
         // Handle error here
         console.error(err);
