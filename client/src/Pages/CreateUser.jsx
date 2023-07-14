@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useCreateUserMutation, useUpdateUserMutation } from '../API/api'
 import Swal from 'sweetalert2'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Form, Link, useNavigate, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 const CreateUser = () => {
@@ -17,7 +17,9 @@ const CreateUser = () => {
             setUser(userData)
         }
     },[userData])
-   
+
+    
+
 
     const [CreateUser] = useCreateUserMutation()
     const [updateUser] = useUpdateUserMutation()
@@ -142,6 +144,12 @@ const CreateUser = () => {
       <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
         Create 
       </button>
+
+      <Link to='/'> 
+    <button className="bg-white hover:bg-gray-100 text-gray-700 font-bold ms-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+      Back
+    </button>
+    </Link>
   
   </form>
   
@@ -171,6 +179,12 @@ const CreateUser = () => {
     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
       Update 
     </button>
+
+    <Link to='/'> 
+    <button className="bg-white hover:bg-gray-100 text-gray-700 font-bold ms-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+      Back
+    </button>
+    </Link>
 
 </form>
 
